@@ -31,7 +31,6 @@ final class MovieQuizViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.showNextQuestionOrResults()
             self.toggleAnswerButtons()
-            
         }
     }
 
