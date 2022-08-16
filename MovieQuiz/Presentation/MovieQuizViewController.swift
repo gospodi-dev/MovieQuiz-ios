@@ -47,17 +47,9 @@ final class MovieQuizViewController: UIViewController {
     }
 
     // MARK: - модели данных для вьюшек
-    private struct QuizStepViewModel {
-        let image: UIImage?
-        let questionText: String
-        let questionNumber: String
-    }
+    
 
-    private struct QuizResultsViewModel {
-        let title: String
-        let textResult: String
-        let buttonText: String
-    }
+    
 
     private struct AnswerResultsViewModel {
         let answerResult: Bool

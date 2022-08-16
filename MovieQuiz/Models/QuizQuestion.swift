@@ -7,3 +7,10 @@
 
 import Foundation
 import UIKit
+
+private struct QuizQuestion {
+    let imageName: UIImage?
+    let rating: Float
+    let questionText: String
+    let correctAnswer: Bool
+}

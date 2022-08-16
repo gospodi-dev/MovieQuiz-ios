@@ -141,9 +141,9 @@
 		CCF9E2EC28ABE58F0078032E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CCF9E2F128ABE5EE0078032E /* QuizQuestion.swift */,
 				CCF9E2ED28ABE5AB0078032E /* QuizStepViewModel.swift */,
 				CCF9E2EF28ABE5CB0078032E /* QuizResultsViewModel.swift */,
-				CCF9E2F128ABE5EE0078032E /* QuizQuestion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
