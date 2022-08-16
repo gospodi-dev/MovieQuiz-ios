@@ -45,13 +45,7 @@ final class MovieQuizViewController: UIViewController {
             self.toggleAnswerButtons()
         }
     }
-    // MARK: - Mock-данные
-    private struct QuizQuestion {
-        let imageName: UIImage?
-        let rating: Float
-        let questionText: String
-        let correctAnswer: Bool
-    }
+
     // MARK: - модели данных для вьюшек
     private struct QuizStepViewModel {
         let image: UIImage?

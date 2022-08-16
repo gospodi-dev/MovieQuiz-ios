@@ -60,4 +60,19 @@ class QuestionFactory {
             questionText: "Рейтинг этого фильма больше чем 6?",
             correctAnswer: false)
     ]
+
+    func requestNextQuestion() -> QuizQuestion? {
+        let index = (0..<questions.count).randomElement() ?? 0
+        return questions[safe: index]
+    }
+
+
+}
+
+// MARK: - Mock-данные
+private struct QuizQuestion {
+    let imageName: UIImage?
+    let rating: Float
+    let questionText: String
+    let correctAnswer: Bool
 }
