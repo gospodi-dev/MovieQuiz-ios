@@ -21,10 +21,20 @@ final class MovieQuizViewController: UIViewController {
     }
 
     private func showCurrentQuizStep() {
-        if let firstQuestion = questionFactory.requestNextQuestion() {
-            currentQuestion = firstQuestion
-            let stepModel = convert(model: firstQuestion)
-            show(quiz: stepModel)
+        questionFactory.requestNextQuestion { [weak self] question in
+            guard
+                let self = self,
+                let question = question
+            else {
+                // Ошибка
+                return
+            }
+
+            self.currentQuestion = question
+            let stepModel = self.convert(model: question)
+            DispatchQueue.main.async {
+                self.show(quiz: stepModel)
+            }
         }
     }
 
