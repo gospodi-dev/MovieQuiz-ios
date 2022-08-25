@@ -7,11 +7,11 @@ final class MovieQuizViewController: UIViewController {
     @IBOutlet private weak var yesAnswerButton: UIButton!
     @IBOutlet private weak var noAnswerButton: UIButton!
 
+    private let questionFactory: QuestionFactoryProtocol = QuestionFactory()
 
     private var quizState = QuizResultsViewModel(maxCorrectAnswers: 10)
     private var currentQuestion: QuizQuestion?
     private var currentQuestionIndex: Int = 0
-    private let questionFactory: QuestionFactory = QuestionFactory()
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()

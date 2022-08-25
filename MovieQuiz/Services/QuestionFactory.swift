@@ -3,7 +3,7 @@
 import Foundation
 
 // Объект этого класса и будет заниматься генерацией новых вопросов.
-class QuestionFactory {
+class QuestionFactory: QuestionFactoryProtocol {
     private let questions: [QuizQuestion] = [
         QuizQuestion(
             imageName: "The Godfather",
