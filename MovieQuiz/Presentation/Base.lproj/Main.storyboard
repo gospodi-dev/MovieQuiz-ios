@@ -124,11 +124,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="counterLabel" destination="7Zs-45-Ux4" id="FTl-yQ-egf"/>
-                        <outlet property="noButton" destination="u0C-rl-W3L" id="yRT-ic-7V2"/>
+                        <outlet property="noAnswerButton" destination="u0C-rl-W3L" id="yRT-ic-7V2"/>
                         <outlet property="posterImageView" destination="wrF-aB-Hu6" id="YE9-3g-0eq"/>
-                        <outlet property="textLabel" destination="JGk-FV-es0" id="YTw-Ll-AMG"/>
-                        <outlet property="yesButton" destination="QjE-w3-gLA" id="rc9-l7-Zqn"/>
+                        <outlet property="quizQuestionLabel" destination="7Zs-45-Ux4" id="FTl-yQ-egf"/>
+                        <outlet property="yesAnswerButton" destination="QjE-w3-gLA" id="rc9-l7-Zqn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

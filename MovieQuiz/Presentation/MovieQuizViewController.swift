@@ -2,6 +2,10 @@ import UIKit
 
 final class MovieQuizViewController: UIViewController {
     private var currentQuestionIndex: Int = 0
+    private let questionsAmount: Int = 10
+    private let questionFactory: QuestionFactory = QuestionFactory()
+    private var currentQuestion: QuizQuestion?
+    
     private var score = 0
     private var totalScore = 0
     private var quizSum: Int = 0
@@ -10,10 +14,10 @@ final class MovieQuizViewController: UIViewController {
     private var currentDate: String { Date().dateTimeString }
 
     @IBOutlet private var posterImageView: UIImageView!
-    @IBOutlet private var counterLabel: UILabel!
-    @IBOutlet private var textLabel: UILabel!
-    @IBOutlet private weak var yesButton: UIButton!
-    @IBOutlet private weak var noButton: UIButton!
+    @IBOutlet private var quizQuestionLabel: UILabel!
+    @IBOutlet private var quizQuestionLabel: UILabel!
+    @IBOutlet private weak var yesAnswerButton: UIButton!
+    @IBOutlet private weak var noAnswerButton: UIButton!
     // MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,8 +82,8 @@ final class MovieQuizViewController: UIViewController {
     }
 
     private func toggleAnswerButtons() {
-        noButton.isEnabled.toggle()
-        yesButton.isEnabled.toggle()
+        noAnswerButton.isEnabled.toggle()
+        yesAnswerButton.isEnabled.toggle()
     }
     // MARK: - Показываем следующий шаг
     private func showNextQuestionOrResults() {
