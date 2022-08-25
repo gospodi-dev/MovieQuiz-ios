@@ -1,70 +1,63 @@
-//
-//  QuestionFactory.swift
-//  MovieQuiz
-//
 //  Created by Gospodi on 16.08.2022.
-//
 
 import Foundation
 
+// Объект этого класса и будет заниматься генерацией новых вопросов.
 class QuestionFactory {
     private let questions: [QuizQuestion] = [
         QuizQuestion(
-            imageName: UIImage(named: "The Godfather"),
-            rating: 9.2,
+            imageName: "The Godfather",
             questionText: "Рейтинг этого фильма больше чем 6?",
-            correctAnswer: true),
+            correctAnswer: true,
+            rating: 9.2),
         QuizQuestion(
-            imageName: UIImage(named: "The Dark Knight"),
-            rating: 9,
+            imageName: "The Dark Knight",
             questionText: "Рейтинг этого фильма больше чем 6?",
-            correctAnswer: true),
+            correctAnswer: true,
+            rating: 9),
         QuizQuestion(
-            imageName: UIImage(named: "Kill Bill"),
-            rating: 9.2,
+            imageName: "Kill Bill",
             questionText: "Рейтинг этого фильма больше чем 6?",
-            correctAnswer: true),
+            correctAnswer: true,
+            rating: 8.1),
         QuizQuestion(
-            imageName: UIImage(named: "The Avengers"),
-            rating: 8,
+            imageName: "The Avengers",
             questionText: "Рейтинг этого фильма больше чем 6?",
-            correctAnswer: true),
+            correctAnswer: true,
+            rating: 8),
         QuizQuestion(
-            imageName: UIImage(named: "Deadpool"),
-            rating: 8,
+            imageName: "Deadpool",
             questionText: "Рейтинг этого фильма больше чем 6?",
-            correctAnswer: true),
+            correctAnswer: true,
+            rating: 8),
         QuizQuestion(
-            imageName: UIImage(named: "The Green Knight"),
-            rating: 6.6,
+            imageName: "The Green Knight",
             questionText: "Рейтинг этого фильма больше чем 6?",
-            correctAnswer: true),
+            correctAnswer: true,
+            rating: 6.6),
         QuizQuestion(
-            imageName: UIImage(named: "Old"),
-            rating: 5.8,
+            imageName: "Old",
             questionText: "Рейтинг этого фильма больше чем 6?",
-            correctAnswer: false),
+            correctAnswer: false,
+            rating: 5.8),
         QuizQuestion(
-            imageName: UIImage(named: "The Ice Age Adventures of Buck Wild"),
-            rating: 4.3,
+            imageName: "The Ice Age Adventures of Buck Wild",
             questionText: "Рейтинг этого фильма больше чем 6?",
-            correctAnswer: false),
+            correctAnswer: false,
+            rating: 4.3),
         QuizQuestion(
-            imageName: UIImage(named: "Tesla"),
-            rating: 5.1,
+            imageName: "Tesla",
             questionText: "Рейтинг этого фильма больше чем 6?",
-            correctAnswer: false),
+            correctAnswer: false,
+            rating: 5.1),
         QuizQuestion(
-            imageName: UIImage(named: "Vivarium"),
-            rating: 5.8,
+            imageName: "Vivarium",
             questionText: "Рейтинг этого фильма больше чем 6?",
-            correctAnswer: false)
+            correctAnswer: false,
+            rating: 5.8)
     ]
-
     func requestNextQuestion() -> QuizQuestion? {
-        let index = (0..<questions.count).randomElement() ?? 0
+        let index = (0..<questions.count).randomElement() ?? 0 // выбраtм индекс вопроса из массива questions
         return questions[safe: index]
     }
-
-
 }
