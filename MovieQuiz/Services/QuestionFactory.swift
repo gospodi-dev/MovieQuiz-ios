@@ -59,6 +59,10 @@ class QuestionFactory: QuestionFactoryProtocol {
             rating: 5.8)
     ]
 
+    init(delegate: QuestionFactoryDelegate) {
+        self.delegate = delegate
+    }
+
     func requestNextQuestion() -> QuizQuestion? {
         let index = (0..<questions.count).randomElement() ?? 0
         return questions[safe: index]
