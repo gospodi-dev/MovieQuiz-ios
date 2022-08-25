@@ -2,8 +2,10 @@
 
 import Foundation
 
-// Объект этого класса и будет заниматься генерацией новых вопросов.
 class QuestionFactory: QuestionFactoryProtocol {
+
+    private let delegate: QuestionFactoryDelegate
+
     private let questions: [QuizQuestion] = [
         QuizQuestion(
             imageName: "The Godfather",
@@ -56,6 +58,7 @@ class QuestionFactory: QuestionFactoryProtocol {
             correctAnswer: false,
             rating: 5.8)
     ]
+
     func requestNextQuestion() -> QuizQuestion? {
         let index = (0..<questions.count).randomElement() ?? 0
         return questions[safe: index]
