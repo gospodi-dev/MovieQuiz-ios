@@ -56,10 +56,8 @@ class QuestionFactory: QuestionFactoryProtocol {
             correctAnswer: false,
             rating: 5.8)
     ]
-    func requestNextQuestion(completion: (QuizQuestion?) -> Void)  {
+    func requestNextQuestion() -> QuizQuestion? {
         let index = (0..<questions.count).randomElement() ?? 0
-        let question = questions[safe: index]
-        
-        completion(question)                                      
+        return questions[safe: index]
     }
 }
