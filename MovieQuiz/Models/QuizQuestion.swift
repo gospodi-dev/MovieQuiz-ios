@@ -3,8 +3,8 @@
 import Foundation
 
 struct QuizQuestion {
-    let imageName: String
-    let questionText: String
-    let correctAnswer: Bool
-    let rating: Double
+    let image: Data
+    let rating: Float
+    let question: String
+    let answer: Bool
 }

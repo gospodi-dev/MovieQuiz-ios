@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -134,11 +134,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="counterLabel" destination="PCO-cs-oHl" id="ebG-eS-3Sb"/>
+                        <outlet property="imageView" destination="5t3-Qb-Atw" id="B65-7d-d3s"/>
                         <outlet property="noAnswerButton" destination="Jq4-Tz-wa1" id="qAH-a2-VPA"/>
+                        <outlet property="noButton" destination="Jq4-Tz-wa1" id="lbI-cC-2LO"/>
                         <outlet property="posterImageView" destination="5t3-Qb-Atw" id="GeT-4E-VLa"/>
                         <outlet property="quizCounterLabel" destination="PCO-cs-oHl" id="HAI-i7-Aa2"/>
                         <outlet property="quizQuestionLabel" destination="gIA-u2-YFM" id="WPS-b0-tHu"/>
+                        <outlet property="textLabel" destination="gIA-u2-YFM" id="fre-jy-SSE"/>
                         <outlet property="yesAnswerButton" destination="Een-ux-enZ" id="Ksc-HI-Lqy"/>
+                        <outlet property="yesButton" destination="Een-ux-enZ" id="weC-5I-dgV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

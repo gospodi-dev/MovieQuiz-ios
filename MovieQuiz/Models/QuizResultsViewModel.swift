@@ -9,32 +9,22 @@ import Foundation
 import UIKit
 
 struct QuizResultsViewModel {
-    var counterCorrectAnswers: Int = 0
-    var maxCorrectAnswers: Int
-    var quizCounter: Int = 0
-    var recordCorrectAnswers: Int = 0
-    var recordDate = Date()
-    var averageAccuracy: Double {
-        // swiftlint:disable all
-        Double(results.reduce(0, +)) / Double(maxCorrectAnswers * (results.count == 0 ? 1 : results.count)) * 100
-    }
-
-    var results: [Int] = []
-
-    var viewModel: ViewModel {
-        ViewModel(
-            title: counterCorrectAnswers == maxCorrectAnswers ? "Вы победили!" : "Этот раунд окончен!",
-            resultMessage:  """
-        Ваш результат: \(counterCorrectAnswers)/\(maxCorrectAnswers)
-        Количество сыгранных квизов: \(quizCounter)
-        Рекорд: \(recordCorrectAnswers)/\(maxCorrectAnswers) (\(recordDate.dateTimeString)) 
-        Средняя точность: \(averageAccuracy)%
-        """
-        )
-    }
-
-    struct ViewModel {
-        let title: String
-        let resultMessage: String
+    let title: String
+    let text: String
+    let buttonText: String
+    init(title: String, buttonText: String, stats: StatisticService, questionsAmount: Int, score: Int) {
+        let correct = stats.bestGame.correct
+        let totalQuestions = stats.bestGame.total
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yy HH:mm"
+        let dateString = dateFormatter.string(from: stats.bestGame.date)
+        self.text = """
+            Ваш результат: \(score)/\(questionsAmount)
+            Количество сыгранных квизов: \(stats.gamesCount)
+            Рекорд: \(correct)/\(totalQuestions) (\(dateString))
+            Средняя точность: \(String(format: "%.2f", stats.totalAccuracy))%
+            """
+        self.title = title
+        self.buttonText = buttonText
     }
 }
